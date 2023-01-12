@@ -1,0 +1,62 @@
+@use "variaveis" as v;
+@use "mixins" as mx;
+@use "extend";
+
+.footer {
+  width: 100%;
+  @extend %padding_sections;
+  background: v.$color_blue;
+
+  &__container {
+    @extend %container;
+    @include mx.flex_start;
+    flex-wrap: wrap;
+  }
+
+  &__widget {
+    flex: 25%;
+
+    h4 {
+      color: v.$color_white;
+      padding-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    ul li {
+      padding-bottom: 7px;
+    }
+
+    a,
+    p {
+      color: v.$color_brow;
+    }
+
+    button {
+      @extend %button;
+      margin-top: 1px;
+
+      &:hover {
+        background: v.$color_brow;
+      }
+    }
+
+    i.social {
+      color: v.$color_brow;
+      font-size: 1.5rem;
+      padding: 20px 10px 0 0;
+    }
+
+    i.iContato {
+      padding-right: 10px;
+    }
+
+    form {
+      @include mx.flex_column;
+
+      input {
+        padding: 10px;
+        width: 100%;
+      }
+    }
+  }
+}

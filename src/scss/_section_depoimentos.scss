@@ -1,0 +1,66 @@
+@use "variaveis" as v;
+@use "mixins" as mx;
+@use "extend";
+
+.depoimentos {
+  width: 100%;
+  @extend %padding_sections;
+
+  &__container {
+    @extend %container;
+
+    span {
+      @extend %title_span;
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      @extend %title_h2;
+      text-align: center;
+    }
+  }
+
+  &__cards {
+    @include mx.flex;
+    margin-top: 50px;
+    gap: 10px;
+  }
+
+  &__card {
+    padding: 10px;
+
+    span {
+      display: block;
+      text-align: left;
+      padding-bottom: 20px;
+    }
+
+    p {
+      line-height: 26px;
+      color: v.$color_subtitle;
+    }
+  }
+
+  &__usuario {
+    @include mx.flex;
+    padding-top: 50px;
+
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    div {
+      padding: 15px 0 0 15px;
+
+      & p:first-child {
+        color: v.$color_brow;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

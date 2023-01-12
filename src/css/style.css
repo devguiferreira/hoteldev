@@ -1,0 +1,477 @@
+@charset "UTF-8";
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+button {
+  border: none;
+}
+
+.footer__container, .depoimentos__container, .time__container, .servicos__container, .diferencial__container, .header__container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.header__nav ul li:hover, .footer__widget button:hover, .header__nav button:hover {
+  transform: scale(1.1);
+}
+
+.diferencial__text h4::before, .header__marketing {
+  border-left: 5px solid rgb(170, 132, 83);
+  padding-left: 10px;
+}
+
+.footer, .depoimentos, .time, .servicos, .diferencial {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.depoimentos__container h2, .time__container h2, .servicos__container h2, .diferencial__text h2 {
+  color: rgb(24, 27, 28);
+  font-size: 3.125rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.depoimentos__container span, .time__container span, .servicos__container span, .diferencial__text span {
+  color: rgb(170, 132, 83);
+  text-transform: uppercase;
+}
+
+.footer__widget button, .header__nav button {
+  padding: 13px 30px;
+  background: rgb(170, 132, 83);
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  transition: all 0.5s;
+}
+.footer__widget button:hover, .header__nav button:hover {
+  background: rgb(24, 27, 28);
+}
+
+/* Header */
+.header {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/src/images/hotel.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.header__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-radius: 5px;
+}
+.header__nav i.mobile {
+  display: none;
+}
+.header__nav img {
+  margin: 0;
+  width: 100px;
+}
+.header__nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__nav ul li {
+  margin: 0 10px;
+}
+.header__nav ul li a {
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  padding: 5px 10px;
+}
+.header__nav ul li a i {
+  margin-right: 3px;
+  color: rgb(170, 132, 83);
+}
+.header__marketing {
+  width: 70%;
+}
+.header__marketing h1 {
+  font-size: 3.5rem;
+}
+.header__marketing h1 span {
+  color: rgb(170, 132, 83);
+}
+.header__marketing p {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  line-height: 24px;
+}
+.header__action {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+.header__action a {
+  color: rgb(255, 255, 255);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+.diferencial {
+  width: 100%;
+  background: rgb(242, 242, 242);
+}
+.diferencial__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.diferencial__images {
+  flex: 50%;
+}
+.diferencial__images img {
+  height: 700px;
+  padding: 20px;
+  display: block;
+  margin: auto;
+  border: 3px solid rgb(170, 132, 83);
+}
+.diferencial__text {
+  flex: 50%;
+  padding: 20px;
+}
+.diferencial__text h2 {
+  margin: 10px 0 40px;
+}
+.diferencial__text p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: rgb(119, 119, 119);
+}
+.diferencial__text h4 {
+  color: rgb(30, 34, 35);
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin: 30px 0 30px;
+}
+.diferencial__text h4::before {
+  content: "";
+}
+
+.servicos {
+  width: 100%;
+}
+.servicos__container span {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.servicos__container h2 {
+  text-align: center;
+}
+.servicos__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-top: 30px;
+  gap: 10px;
+}
+.servicos__images figure {
+  position: relative;
+  width: 31%;
+  flex-wrap: wrap;
+}
+.servicos__images figure:hover .overlay {
+  opacity: 0.8;
+}
+.servicos__images figure img {
+  width: 100%;
+}
+.servicos__images figure .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background: black;
+}
+.servicos__images figure .overlay .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.servicos__images figure .overlay .content h3 {
+  border: 3px solid rgb(170, 132, 83);
+  padding: 10px;
+}
+
+.time {
+  width: 100%;
+  background: rgb(242, 242, 242);
+}
+.time__container span {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.time__container h2 {
+  text-align: center;
+}
+.time__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.time__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 400px;
+  padding: 10px 10px 30px;
+  border: 3px solid rgb(170, 132, 83);
+}
+.time__card img {
+  border-radius: 50%;
+  padding: 20px;
+}
+.time__card h4,
+.time__card span,
+.time__card p {
+  text-align: center;
+}
+.time__card:hover {
+  box-shadow: 1px 1px 5px rgb(170, 132, 83);
+}
+
+.depoimentos {
+  width: 100%;
+}
+.depoimentos__container span {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.depoimentos__container h2 {
+  text-align: center;
+}
+.depoimentos__cards {
+  display: flex;
+  margin-top: 50px;
+  gap: 10px;
+}
+.depoimentos__card {
+  padding: 10px;
+}
+.depoimentos__card span {
+  display: block;
+  text-align: left;
+  padding-bottom: 20px;
+}
+.depoimentos__card p {
+  line-height: 26px;
+  color: rgb(30, 34, 35);
+}
+.depoimentos__usuario {
+  display: flex;
+  padding-top: 50px;
+}
+.depoimentos__usuario img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.depoimentos__usuario div {
+  padding: 15px 0 0 15px;
+}
+.depoimentos__usuario div p:first-child {
+  color: rgb(170, 132, 83);
+  font-size: 1.1rem;
+}
+
+.footer {
+  width: 100%;
+  background: rgb(24, 27, 28);
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.footer__widget {
+  flex: 25%;
+}
+.footer__widget h4 {
+  color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+}
+.footer__widget ul li {
+  padding-bottom: 7px;
+}
+.footer__widget a,
+.footer__widget p {
+  color: rgb(170, 132, 83);
+}
+.footer__widget button {
+  margin-top: 1px;
+}
+.footer__widget button:hover {
+  background: rgb(170, 132, 83);
+}
+.footer__widget i.social {
+  color: rgb(170, 132, 83);
+  font-size: 1.5rem;
+  padding: 20px 10px 0 0;
+}
+.footer__widget i.iContato {
+  padding-right: 10px;
+}
+.footer__widget form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__widget form input {
+  padding: 10px;
+  width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 414px) and (orientation: portrait) {
+  /* Header */
+  .header__nav i.mobile {
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .header__nav ul,
+  .header__nav button {
+    display: none;
+  }
+  .header__marketing {
+    width: 100%;
+  }
+  .header__marketing h1 {
+    font-size: 2.5rem;
+  }
+  .header__marketing p {
+    font-size: 1rem;
+  }
+  /* Diferencial */
+  .diferencial__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .diferencial__images img {
+    height: 500px;
+  }
+  .diferencial__text {
+    padding: 20px;
+  }
+  .diferencial__text span {
+    display: block;
+    margin-top: 30px;
+  }
+  .diferencial__text h2 {
+    font-size: 2.5rem;
+  }
+  .diferencial__text h4 {
+    font-size: 1.7rem;
+  }
+  /* Serviços */
+  .servicos__images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .servicos__images figure {
+    width: 100%;
+  }
+  /* Time */
+  .time__card {
+    width: 100%;
+    height: 400px;
+    padding: 10px 10px 30px;
+    border: 3px solid rgb(170, 132, 83);
+  }
+  .time__card img {
+    width: 70%;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    padding: 20px;
+  }
+  /* Depoimentos */
+  .depoimentos__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .depoimentos__card {
+    margin-bottom: 15px;
+    padding-bottom: 50px;
+    border: 3px solid rgb(170, 132, 83);
+    width: 100%;
+  }
+  /* Rodapé */
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer__widget {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer__widget form {
+    width: 100%;
+  }
+  .footer__widget form input {
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

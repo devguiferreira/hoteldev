@@ -1,0 +1,128 @@
+@use "variaveis" as v;
+@use "mixins" as mx;
+@use "extend";
+
+/* Responsividade */
+@media (max-width: 414px) and (orientation: portrait) {
+  /* Header */
+  .header {
+    &__nav {
+      i.mobile {
+        display: flex;
+        color: v.$color_white;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      ul,
+      button {
+        display: none;
+      }
+    }
+
+    &__marketing {
+      width: 100%;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  /* Diferencial */
+  .diferencial {
+    &__container {
+      @include mx.flex_column;
+    }
+
+    &__images {
+      img {
+        height: 500px;
+      }
+    }
+
+    &__text {
+      padding: 20px;
+
+      span {
+        display: block;
+        margin-top: 30px;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      h4 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  /* Serviços */
+  .servicos {
+    &__images {
+      @include mx.flex_column;
+
+      figure {
+        width: 100%;
+      }
+    }
+  }
+
+  /* Time */
+  .time {
+    &__card {
+      width: 100%;
+      height: 400px;
+      padding: 10px 10px 30px;
+      border: v.$border;
+
+      img {
+        width: 70%;
+        display: block;
+        margin: auto;
+        border-radius: 50%;
+        padding: 20px;
+      }
+    }
+  }
+
+  /* Depoimentos */
+  .depoimentos {
+    &__cards {
+      @include mx.flex_column;
+    }
+
+    &__card {
+      margin-bottom: 15px;
+      padding-bottom: 50px;
+      border: v.$border;
+      width: 100%;
+    }
+  }
+
+  /* Rodapé */
+  .footer {
+    &__container {
+      @include mx.flex_column;
+    }
+
+    &__widget {
+      width: 100%;
+      margin-bottom: 20px;
+
+      form {
+        width: 100%;
+
+        input {
+          padding: 10px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
