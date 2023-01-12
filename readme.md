@@ -1,8 +1,8 @@
-<img src="images/logomarca.png" alt="Hotel Dev" />
+<img src="/images/logomarca.png" alt="Hotel Dev" />
 
 ### Um lugar único para aqueles que querem desenvolver suas habilidades de programação
 
-- 👨‍💻 Projeto individual T.EX [Hotel Dev](#)
+- 👨‍💻 Projeto individual T.EX [Hotel Dev](https://devguiferreira.github.io/hoteldev/)
 
 - 🌱 Tecnologias utilizadas **HTML, CSS**
 
@@ -23,4 +23,4 @@
 - Criar uma versão da página [sobre](https://github.com/devguiferreira/hotel_T.EX/tree/main/public), utilizando as tecnologias [HTML CSS]
 - Aplicar responsividade mínima para mobile retrato (**414px portrait**)
 
-<img src="images/screenshot.png" alt="Hotel Dev" />
+<img src="/images/screenshot.png" alt="Hotel Dev" />
